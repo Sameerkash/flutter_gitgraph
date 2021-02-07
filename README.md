@@ -1,7 +1,7 @@
 # flutter_gitgraph
 
-A new Flutter package project.
-
+Easily show a shiny Git Graph.
+Inspired by [GitGraph.js](gitgtaphjs.com)
 ## Getting Started
 
 This project is a starting point for a Dart
