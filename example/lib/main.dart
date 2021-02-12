@@ -25,39 +25,66 @@ class MyWidget extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Center(
-        child: Row(
-          children: [
-            Stack(
-              alignment: Alignment.topCenter,
-              children: [
-                BranchWidget(),
-                Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    CommitWidget(),
-                    SizedBox(
-                      height: 25,
-                    ),
-                    CommitWidget(),
-                    SizedBox(
-                      height: 25,
-                    ),
-                    CommitWidget(),
-                    SizedBox(
-                      height: 25,
-                    ),
-                    CommitWidget(),
-                  ],
-                )
-              ],
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [Text("master")],
-            )
-          ],
+        child: Container(
+          margin: EdgeInsets.all(20),
+          child: Row(
+            children: [
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      CommitWidget(),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: TagWidget(),
+                      ),
+                    ],
+                  ),
+                  BranchWidget(),
+                  Row(
+                    children: [
+                      Row(
+                        children: [
+                          CommitWidget(),
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: TagWidget(),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  BranchWidget(),
+                  Row(
+                    children: [
+                      CommitWidget(),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: TagWidget(),
+                      ),
+                    ],
+                  ),
+                  BranchWidget(),
+                  Row(
+                    children: [
+                      CommitWidget(),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: TagWidget(),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              // Column(
+              //   crossAxisAlignment: CrossAxisAlignment.center,
+              //   children: [Text("master")],
+              // )
+            ],
+          ),
         ),
       ),
     );
