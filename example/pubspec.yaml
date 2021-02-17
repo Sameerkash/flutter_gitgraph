@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_gitgraph:
     path: ../
+  timelines: ^0.0.2
 
 dev_dependencies:
   flutter_test:

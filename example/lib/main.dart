@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gitgraph/flutter_gitgraph.dart';
+import 'package:timelines/timelines.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,79 +15,85 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyWidget(),
+      home: Test(),
     );
   }
 }
 
-class MyWidget extends StatelessWidget {
+class Test extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: Container(
-          margin: EdgeInsets.all(20),
-          child: Row(
-            children: [
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      CommitWidget(),
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: TagWidget(),
-                      ),
-                    ],
-                  ),
-                  BranchWidget(),
-                  Row(
-                    children: [
-                      Row(
-                        children: [
-                          CommitWidget(),
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: TagWidget(),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  BranchWidget(),
-                  Row(
-                    children: [
-                      CommitWidget(),
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: TagWidget(),
-                      ),
-                    ],
-                  ),
-                  BranchWidget(),
-                  Row(
-                    children: [
-                      CommitWidget(),
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: TagWidget(),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              // Column(
-              //   crossAxisAlignment: CrossAxisAlignment.center,
-              //   children: [Text("master")],
-              // )
-            ],
-          ),
-        ),
-      ),
+    return CustomPaint(
+      painter: Timeline(),
+      child: Container(),
     );
+  }
+}
+
+class Timeline extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    var paint = Paint()
+      ..color = Colors.grey
+      ..strokeWidth = 10
+      ..style = PaintingStyle.stroke
+      ..strokeCap = StrokeCap.round;
+
+    var branchPaint = Paint()
+      ..color = Colors.blue
+      ..strokeWidth = 10
+      ..style = PaintingStyle.stroke
+      ..strokeCap = StrokeCap.round;
+
+    Offset offsetTopCenter = size.topCenter(new Offset(0.0, 50.0));
+    Offset offsetBottom = size.bottomCenter(new Offset(0.0, 50.0));
+
+    Offset newoffsetTopCenter = size.topCenter(new Offset(119.5, 50.0));
+    Offset newoffsetBottom = size.center(new Offset(119.5, -180.0));
+
+    canvas.drawLine(offsetTopCenter, offsetBottom, paint);
+
+    Paint circleFill = new Paint()
+      ..color = Colors.grey
+      ..style = PaintingStyle.fill
+      ..strokeWidth = 20;
+
+    Paint branchCirle = new Paint()
+      ..color = Colors.blue
+      ..style = PaintingStyle.fill
+      ..strokeWidth = 20;
+
+    Offset centeroff = size.center(new Offset(0.0, -50.0));
+
+    Offset newOfff = size.center(new Offset(0.0, -50.0));
+
+    Path path = Path();
+    path.moveTo(centeroff.dx, centeroff.dy);
+    path.cubicTo(newOfff.dx, newOfff.dy, newOfff.dx * 1.2, newOfff.dy,
+        centeroff.dx + 120, centeroff.dy * 0.6);
+
+    canvas.drawPath(path, branchPaint);
+
+    canvas.drawLine(newoffsetTopCenter, newoffsetBottom, branchPaint);
+
+    canvas.drawCircle(centeroff, 17.0, circleFill);
+
+    canvas.drawCircle(size.center(new Offset(0.0, -250.0)), 17.0, circleFill);
+    canvas.drawCircle(size.center(newOfff), 17.0, circleFill);
+
+    canvas.drawCircle(size.center(new Offset(0.0, 50.0)), 17.0, circleFill);
+
+    canvas.drawCircle(size.center(new Offset(0.0, 200.0)), 17.0, circleFill);
+
+    /// Branch commits
+    canvas.drawCircle(size.center(new Offset(119.5, -160)), 17.0, branchCirle);
+
+    canvas.drawCircle(size.center(new Offset(119.5, -250)), 17.0, branchCirle);
+    canvas.drawCircle(size.center(new Offset(119.5, -350)), 17.0, branchCirle);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return false;
   }
 }

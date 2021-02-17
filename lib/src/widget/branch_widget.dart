@@ -10,7 +10,7 @@ class BranchWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 5,
+      width: 15,
       height: 75,
       decoration: BoxDecoration(
           color: Colors.grey, borderRadius: BorderRadius.circular(15)),
