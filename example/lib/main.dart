@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Test(),
+      home: MyWidget(),
     );
   }
 }
@@ -23,10 +23,10 @@ class MyApp extends StatelessWidget {
 class Test extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return CustomPaint(
-      painter: Timeline(),
-      child: Container(),
-    );
+    return
+      Container(
+        child: CurveWidget(),
+      );
   }
 }
 
@@ -97,3 +97,57 @@ class Timeline extends CustomPainter {
     return false;
   }
 }
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      body: Center(
+        child: Row(
+          children: [
+
+            Stack(
+              alignment: Alignment.topCenter,
+              children: [
+                BranchWidget(),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    CommitWidget(),
+                    SizedBox(
+                      height: 25,
+                    ),
+                    CommitWidget(),
+                    SizedBox(
+                      height: 25,
+                    ),
+                    CommitWidget(),
+                    SizedBox(
+                      height: 25,
+                    ),
+                    CommitWidget(),
+                  ],
+                )
+              ],
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [Text("master")],
+            ),
+            Container(
+              height: 4000,
+              child: CurveWidget(),
+            )
+
+          ],
+
+        ),
+      ),
+    );
+  }
+}
+
+
