@@ -1,7 +1,7 @@
 library flutter_gitgraph;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export './src/gitgraph.dart';
+export './src/widget/branch_widget.dart';
+export './src/widget/tag_widget.dart';
+export 'src/models/commit.dart';
+
