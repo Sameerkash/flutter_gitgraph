@@ -37,11 +37,11 @@ Setting things up:
 
 ### [Contributing Guide](CONTRIBUTING.md)
 
-Read our [contributing guide](contributing) to learn about our development process, how to propose bugfixes and improvements.
+Read our [contributing guide](CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements.
 
-### [Good First Issues](good-first-issues)
+### Good First Issues
 
-To help you get your feet wet and get you familiar with our contribution process, we have a list of [good first issues](good-first-issues) that contain bugs/features which have a relatively limited scope. This is a great place to get started.
+To help you get your feet wet and get you familiar with our contribution process, we have a list of good first issues that contain bugs/features which have a relatively limited scope. This is a great place to get started.
 
 ## Versioning
 
@@ -50,7 +50,7 @@ We use [SemVer](semver) as a guideline for our versioning here.
 
 ## Copyright and License
 
-Copyright (c) 2021 Sameer Kashyap under the [MIT license](license).
+Copyright (c) 2021 Sameer Kashyap under the [MIT license](LICENSE).
 
 
 Inspired by [GitGraph.js](gitgtaphjs.com)
