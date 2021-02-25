@@ -12,7 +12,7 @@ Flutter_gitgraph codebase is a monorepo.
 
 As a user, you're probably interested in:
 
-- [examople](example)
+- [example](example)
 
 
 You'll find usage details in the README.
