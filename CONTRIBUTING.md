@@ -29,10 +29,8 @@ Guidelines for bug reports:
 2.  **Check if the issue has been fixed** &mdash; try to reproduce it using the
     latest `master` branch in the repository.
 
-3.  **Isolate the problem** &mdash; create a [reduced test
-    case](http://css-tricks.com/reduced-test-cases/) and a live example.
 
-4.  **Create a new issue** using the "Bug Report" template. Fill the different
+3.  **Create a new issue** using the "Bug Report" template. Fill the different
     sections to provide a maximum of details. They will help us to fix potential bugs.
 
 
