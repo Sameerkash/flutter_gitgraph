@@ -3,7 +3,7 @@
 A Flutter library to easily show a shiny Git Graphs.
 
 
-[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)][license]
+![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 
 ## Getting started
