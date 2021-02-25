@@ -1,6 +1,6 @@
 # Flutter_gitgraph
 
-A Flutter library to easily show a shiny Git Graphs.
+A Flutter library to easily visualize shiny Git Graphs.
 
 
 ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
