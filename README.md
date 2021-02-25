@@ -35,7 +35,7 @@ Setting things up:
 
 ## Contributing
 
-### [Contributing Guide](contributing.md)
+### [Contributing Guide](CONTRIBUTING.md)
 
 Read our [contributing guide](contributing) to learn about our development process, how to propose bugfixes and improvements.
 
