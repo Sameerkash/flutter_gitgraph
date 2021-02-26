@@ -98,6 +98,7 @@ class _GitGraphState extends State<GitGraph> {
   Widget build(BuildContext context) {
     return Container(
       child: CustomPaint(
+        key: Key('graph'),
         size: Size(500, 700),
         painter: GraphPainter(
           data: commits,

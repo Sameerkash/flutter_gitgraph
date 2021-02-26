@@ -18,5 +18,5 @@ class Branch {
     this.name,
     this.id,
     this.commits,
-  }); 
+  });
 }
