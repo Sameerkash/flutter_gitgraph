@@ -88,7 +88,7 @@ class _GitGraphState extends State<GitGraph> {
   void initState() {
     super.initState();
     parseData();
-    Size canvasSize = Size(500, 500);
+    Size canvasSize = Size(500, 700);
     calculatePositions(
         commits.first, Offset(canvasSize.width / 2, canvasSize.height - 100));
   }
