@@ -27,10 +27,10 @@ class GraphPainter extends CustomPainter {
       ..color = Colors.blue
       ..style = PaintingStyle.stroke
       ..strokeWidth = 5;
-    Paint controlHandlePaint = Paint()
-      ..color = Colors.black
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 5;
+    // Paint controlHandlePaint = Paint()
+    //   ..color = Colors.black
+    //   ..style = PaintingStyle.stroke
+    //   ..strokeWidth = 5;
     for (int x = 0; x < data.length; x++) {
       Commit element = data[x];
       canvas.drawCircle(commitMap[element.id].position, 10, circlePaint);
