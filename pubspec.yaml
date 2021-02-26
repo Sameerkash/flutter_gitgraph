@@ -1,8 +1,7 @@
 name: flutter_gitgraph
 description: Eaisly display a shiny git graph.
 version: 0.0.1
-author: Sameer Kashyap <sameera.s.kashyap@gmail.com>
-homepage:
+homepage: https://github.com/Sameerkash/flutter_gitgraph
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
