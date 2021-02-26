@@ -1,4 +1,4 @@
-# Flutter_gitgraph
+# flutter_gitgraph
 
 A Flutter library to easily visualize shiny Git Graphs.
 
@@ -69,10 +69,10 @@ Read our [contributing guide](CONTRIBUTING.md) to learn about our development pr
 ### Good First Issues
 
 To help you get your feet wet and get you familiar with our contribution process, we have a list of good first issues that contain bugs/features which have a relatively limited scope. This is a great place to get started.
-
+<!-- 
 ## Versioning
 
-We use [SemVer](semver) as a guideline for our versioning here.
+We use [SemVer](semver) as a guideline for our versioning here. -->
 
 ## Copyright and License
 

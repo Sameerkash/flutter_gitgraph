@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 import '../models/commit.dart';
 
+
+/// The [CustomPainter] class that is used to draw the [Commit] tree.
 class GraphPainter extends CustomPainter {
   final List<Commit> data;
   final Map<String, Commit> commitMap;

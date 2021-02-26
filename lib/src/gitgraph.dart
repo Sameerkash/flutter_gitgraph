@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'models/commit.dart';
 import 'widget/graph_painter.dart';
 
+/// The widget used to show a Git workflow graph. It uses [Commit] data to draw
+/// a graph using [GraphPainter].
 class GitGraph extends StatefulWidget {
   const GitGraph({
     Key key,
@@ -17,19 +19,18 @@ class GitGraph extends StatefulWidget {
 }
 
 class _GitGraphState extends State<GitGraph> {
-  ///
+  /// List of [Commit]s.
   List<Commit> commits = [];
 
-  ///
+  /// A Map of commit child ids to be drawn.
   Map<String, List<String>> commitChildData = {};
 
-  ///
+  /// A Map of [Commit]s used to draw a curved branch.
   Map<String, Commit> commitsMap = {};
 
-  ///
+  /// A List to keep track of the position of [Commit]s already drawn.
   List<Offset> usedPositions = [];
 
-  ///
   void parseData() {
     commits = widget.commits;
     commits.forEach((element) {

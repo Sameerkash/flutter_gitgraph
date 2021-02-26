@@ -2,25 +2,24 @@ name: Flutter-CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   flutter_test:
-    name: Run flutter test and analyze 
+    name: Run flutter test and analyze
     runs-on: ubuntu-latest
     steps:
-    
-    - uses: actions/checkout@v2
-    - uses: actions/setup-java@v1
-      with:
-        java-version: '12.x'
-    
-    - uses: subosito/flutter-action@v1
-      with:
-        channel: 'beta'
-    - run: flutter pub get
-    - run: flutter format --set-exit-if-changed .
-    - run: flutter analyze .
-    - run: flutter test
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: "12.x"
+
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: "stable"
+      - run: flutter pub get
+      - run: flutter format --set-exit-if-changed .
+      - run: flutter analyze .
+      - run: flutter test
